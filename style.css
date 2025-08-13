@@ -1,0 +1,135 @@
+:root {
+    --cor-principal: #1a237e;      
+    --cor-secundaria: #3949ab;     
+    --cor-fundo: #121212;          
+    --cor-texto: #e3e3e3;          
+    --cor-destaque: #00bcd4;       
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+header {
+    background: linear-gradient(90deg, var(--cor-principal) 70%, var(--cor-secundaria) 100%);
+    color: white;
+    padding: 2rem 0 1rem 0;
+    box-shadow: 0 4px 12px rgba(26,35,126,0.18);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.slogan {
+    margin-top: 0.3rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #b3e5fc;
+}
+
+nav {
+    margin-top: 1rem;
+}
+nav a {
+    color: #b3e5fc;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: var(--cor-destaque);
+}
+
+main {
+    margin-top: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    color: var(--cor-destaque);
+    margin-bottom: 0.7rem;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.projeto {
+    background: #1a237e;
+    color: #e3e3e3;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(58,12,163,0.08);
+    padding: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 6px solid var(--cor-destaque);
+}
+.projeto:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,188,212,0.18);
+    border-left: 8px solid var(--cor-secundaria);
+}
+.projeto h3 {
+    margin-top: 0;
+    color: var(--cor-destaque);
+}
+.projeto a {
+    display: inline-block;
+    margin-top: 0.6rem;
+    color: var(--cor-destaque);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.projeto a:hover {
+    color: #b3e5fc;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer {
+    background: #21234b;
+    color: #b3e5fc;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+}
+
+#contato ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+#contato ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Responsividade */
+@media (max-width: 650px) {
+    h1 { font-size: 1.7rem; }
+    .container { padding: 0 0.6rem; }
+    .projetos-grid { grid-template-columns: 1fr; }
+}
